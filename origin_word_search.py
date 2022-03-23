@@ -1,4 +1,5 @@
 #! /usr/bin/env python3
+#This script is made to search all words related to any specific term from a specific txt file. Final file inherit-times.txt will contain the result.
 
 import sys
 import re
@@ -40,7 +41,7 @@ if __name__ == '__main__':
     start_pattern = re.compile(r'^\*\*\*\s*START.*$')
     stop_pattern = re.compile(r'^\*\*\*\s*END.*$')
     in_path = "origin.txt"
-    out_path = "origin-inherit-occurrences.txt"
+    out_path = "inherit-times.txt"
     with open(in_path, 'r') as in_stream:
         with open(out_path, 'w') as out_stream:
             num_occurrences = record_all_occurrences(in_stream = in_stream,
