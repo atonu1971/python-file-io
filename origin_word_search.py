@@ -7,6 +7,18 @@ import re
 def find_iter(in_stream, target_regex,
         start_regex = None,
         stop_regex = None):
+        
+        """
+    Parameters
+    ----------
+    in_stream : File object or string. Input stream for 'target_regex'.
+    target_regex: Regex object. Target pattern found in `in_stream`.
+    start_regex : Rgex object or none
+    stop_regex : Regex object or none
+    Pattern be matcher in  `in_stream` before `target_regex` search starts. target regex searching will start after the start regex line matched. If there is
+    none search begins at the first line. 
+   
+    """
    
     search_has_started = False
     if not start_regex:
@@ -25,6 +37,28 @@ def record_all_occurrences(in_stream, out_stream,
         target_regex,
         start_regex = None,
         stop_regex = None):
+        
+         """
+    Finds all occurrences of the regular expression pattern `target_regex` in
+    `in_stream`, and writes the line number and the found string to
+    `out_stream`.
+    Search all occurences of regex pattern in `target_regex` in `in_stream`, and output the numbers of lines with string `out_stream`
+    '\t' character separates the number and string. 
+    
+    Parameters
+    ----------
+    in_stream : File object or string. Input stream for 'target_regex'.
+    target_regex: Regex object. Target pattern found in `in_stream`.
+    start_regex : Rgex object or none
+    stop_regex : Regex object or none
+    Pattern be matcher in  `in_stream` before `target_regex` search starts. target regex searching will start after the start regex line matched. If there is
+    none search begins at the first line. 
+   
+    Returns
+    -------
+    int
+        The number of `target_regex` occurences was matched in `in_stream`.
+    """
   
     num_occurrences = 0
     for line_index, match_obj in find_iter(in_stream, target_regex,
