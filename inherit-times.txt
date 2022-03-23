@@ -1,10 +1,10 @@
-471	  Inheritance
-660	  inherited
-799	  inheritance
-850	  Inheritance
-914	  inheritance
-991	  INHERITANCE
-993	  inherited
+471	Inheritance
+660	inherited
+799	inheritance
+850	Inheritance
+914	inheritance
+991	INHERITANCE
+993	inherited
 1000	inherited
 1046	inherited
 1047	inheritable
