@@ -39,10 +39,7 @@ def record_all_occurrences(in_stream, out_stream,
         stop_regex = None):
         
          """
-    Finds all occurrences of the regular expression pattern `target_regex` in
-    `in_stream`, and writes the line number and the found string to
-    `out_stream`.
-    Search all occurences of regex pattern in `target_regex` in `in_stream`, and output the numbers of lines with string `out_stream`
+      Search all occurences of regex pattern in `target_regex` in `in_stream`, and output the numbers of lines with string `out_stream`
     '\t' character separates the number and string. 
     
     Parameters
